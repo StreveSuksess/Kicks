@@ -1,0 +1,192 @@
+@import "scss/vars";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Rubik', sans-serif;
+  color: $darkgray;
+  scroll-behavior: smooth;
+}
+
+body {
+  box-sizing: border-box;
+  background: $lightgray;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+a, button, input {
+  border: none;
+  outline: none;
+  text-decoration: none;
+  background: none;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  margin: 32px auto;
+  max-width: 1320px;
+  @media(max-width: 1340px) {
+    padding: 0 16px;
+    margin: 24px auto;
+  }
+}
+
+.categories {
+  .slick-track {
+    @media(max-width: 1340px) {
+      display: flex;
+      flex-wrap: nowrap;
+    }
+  }
+
+  .slick-slide {
+    height: 600px;
+    @media(max-width: 1340px) {
+      height: 348px;
+    }
+  }
+
+  [data-index="0"] {
+    width: calc((100vw - 1320px) / 2);
+    @media(max-width: 1340px) {
+      width: 24px;
+    }
+  }
+
+  [data-index="1"] {
+    border-radius: 64px 0 0 0;
+
+    img {
+      border-radius: 64px 0 0 0;
+    }
+  }
+
+  [data-index="6"] {
+    border-radius: 0 64px 0 0;
+
+    img {
+      border-radius: 0 64px 0 0;
+    }
+  }
+}
+
+.carousel {
+  .slick-track {
+    display: flex;
+  }
+
+  .slick-list {
+    padding-bottom: 22px;
+  }
+
+  .slick-slide {
+    height: 100%;
+
+    div {
+      height: 100%;
+
+      div {
+        height: 100%;
+      }
+
+      div {
+        height: 100%;
+      }
+    }
+  }
+
+  .slick-slide:not(:last-child) {
+    padding-right: 16px;
+  }
+
+  .slick-dots {
+    gap: 4px;
+    margin-top: -32px;
+    @media(max-width: 768px) {
+      margin-top: -24px;
+    }
+
+    li {
+      width: 40px;
+      height: 6px;
+      background: $darkgray;
+      opacity: .25;
+      border-radius: 8px;
+      transition: all .3s;
+      position: relative;
+      @media(max-width: 768px) {
+        width: 32px;
+        height: 4px;
+      }
+    }
+
+    .slick-active {
+      background: $blue;
+      opacity: 1;
+    }
+
+    button {
+      opacity: 0;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+  }
+}
+
+.productCarousel {
+  .slick-dots {
+    display: flex;
+    gap: 8px;
+    bottom: 14px;
+
+    li {
+      width: 12px;
+      height: 12px;
+      background: $darkgray;
+      opacity: .4;
+      border-radius: 50%;
+      transition: all .3s;
+      position: relative;
+      @media(max-width: 500px) {
+        width: 6px;
+        height: 6px;
+      }
+    }
+
+    .slick-active {
+      background: $blue;
+      opacity: 1;
+    }
+
+    button {
+      opacity: 0;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+  }
+}
+
+.withStartAnim {
+  animation: .5s ease startAnim;
+}
+
+@keyframes startAnim {
+  from {
+    transform: translateX(-500px);
+  }
+
+  to {
+    transform: none;
+  }
+}

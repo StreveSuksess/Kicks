@@ -1,0 +1,144 @@
+.reviews {
+  margin-top: 128px;
+}
+@media (max-width: 768px) {
+  .reviews {
+    margin-top: 20px;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 48px;
+}
+@media (max-width: 768px) {
+  .header {
+    margin-bottom: 20px;
+  }
+}
+
+.title {
+  text-transform: uppercase;
+  font-size: 74px;
+  font-weight: 600;
+}
+@media (max-width: 768px) {
+  .title {
+    font-size: 24px;
+  }
+}
+
+.link {
+  padding: 16px 32px;
+  background-color: #4A69E2;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s;
+  border: 1px solid #4A69E2;
+  border-radius: 8px;
+}
+.link:hover {
+  background: transparent;
+  color: #4A69E2;
+}
+
+.content {
+  display: flex;
+  gap: 16px;
+}
+
+.cardHeader {
+  border-radius: 32px 32px 0 0;
+  background: #fff;
+  display: flex;
+  gap: 8px;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 32px;
+}
+@media (max-width: 768px) {
+  .cardHeader {
+    padding: 16px;
+    border-radius: 16px 16px 0 0;
+  }
+}
+.cardText {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.cardText .p {
+  opacity: 0.8;
+  font-weight: 400;
+  font-size: 16px;
+}
+@media (max-width: 768px) {
+  .cardText .p {
+    font-size: 14px;
+  }
+}
+.cardText .stars {
+  display: flex;
+  align-items: center;
+}
+.cardText .stars svg {
+  width: 24px;
+  height: 24px;
+}
+@media (max-width: 768px) {
+  .cardText .stars svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+.cardText .stars span {
+  font-size: 16px;
+  font-weight: 600;
+  display: block;
+  margin-left: 8px;
+}
+@media (max-width: 768px) {
+  .cardText .stars span {
+    font-size: 14px;
+  }
+}
+.cardTitle {
+  font-size: 24px;
+  font-weight: 600;
+}
+@media (max-width: 768px) {
+  .cardTitle {
+    font-size: 20px;
+  }
+}
+
+.avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+@media (max-width: 768px) {
+  .avatar {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+.cardImage {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0 0 32px 32px;
+}
+@media (max-width: 768px) {
+  .cardImage {
+    border-radius: 0 0 16px 16px;
+  }
+}
+
+/*# sourceMappingURL=Reviews.module.css.map */

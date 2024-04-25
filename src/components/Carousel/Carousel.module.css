@@ -1,0 +1,77 @@
+.carousel {
+  margin-top: 64px;
+}
+@media (max-width: 768px) {
+  .carousel {
+    margin-bottom: 52px;
+    margin-top: 28px;
+  }
+}
+
+.header {
+  margin-bottom: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+@media (max-width: 768px) {
+  .header {
+    margin-bottom: 24px;
+  }
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 600;
+}
+@media (max-width: 768px) {
+  .title {
+    font-size: 24px;
+  }
+}
+
+.arrows {
+  display: flex;
+  gap: 16px;
+}
+@media (max-width: 768px) {
+  .arrows {
+    gap: 8px;
+  }
+}
+
+.leftArrow {
+  display: flex;
+  padding: 8px 12px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background: #232321;
+}
+
+.leftArrow, .rightArrow {
+  display: flex;
+  padding: 12px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background: #232321;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.leftArrow svg, .rightArrow svg {
+  transition: all 0.3s;
+}
+.leftArrow:disabled, .rightArrow:disabled {
+  opacity: 0.5;
+}
+.leftArrow:hover svg, .rightArrow:hover svg {
+  scale: 1.4;
+}
+@media (max-width: 768px) {
+  .leftArrow, .rightArrow {
+    padding: 8px;
+  }
+}
+
+/*# sourceMappingURL=Carousel.module.css.map */

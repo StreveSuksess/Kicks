@@ -1,0 +1,271 @@
+.main {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+@media (max-width: 1200px) {
+  .main {
+    flex-direction: column;
+  }
+}
+
+.text {
+  max-width: 430px;
+  width: 100%;
+}
+@media (max-width: 1200px) {
+  .text {
+    max-width: none;
+  }
+}
+
+.images {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(2, 1fr);
+}
+.images img {
+  width: 100%;
+  object-fit: cover;
+}
+.images .firstImage {
+  border-radius: 48px 0 0 0;
+}
+.images .secondImage {
+  border-radius: 0 48px 0 0;
+}
+.images .thirdImage {
+  border-radius: 0 0 0 48px;
+}
+.images .fourthImage {
+  border-radius: 0 0 48px 0;
+}
+@media (max-width: 1200px) {
+  .images {
+    display: none;
+  }
+}
+
+.sizes {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.sizeRadio {
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.sizeRadio input {
+  display: none;
+}
+.sizeRadio div {
+  transition: all 0.3s;
+  background: #fff;
+  padding: 16px;
+  border-radius: 8px;
+}
+.sizeRadio div span {
+  transition: all 0.3s;
+  color: #232321;
+  font-size: 14px;
+  font-weight: 500;
+}
+.sizeRadio input:checked + div {
+  background: #232321;
+}
+.sizeRadio input:checked + div span {
+  color: #fff;
+}
+.sizeRadio input:disabled + div {
+  background: #D2D1D3;
+}
+.sizeRadio input:disabled + div span {
+  color: #8F8C91;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 600;
+}
+@media (max-width: 500px) {
+  .title {
+    font-size: 30px;
+  }
+}
+
+.price {
+  margin-top: 16px;
+  color: #4A69E2;
+  font-size: 24px;
+  font-weight: 600;
+}
+@media (max-width: 500px) {
+  .price {
+    margin-top: 8px;
+  }
+}
+
+.group {
+  margin-top: 32px;
+}
+@media (max-width: 500px) {
+  .group {
+    margin-top: 24px;
+  }
+}
+.group .groupTitle {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+.group .color div {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+@media (max-width: 500px) {
+  .group .color div {
+    width: 24px;
+    height: 24px;
+  }
+}
+.group .color .blue {
+  background-color: #4A69E2;
+}
+.group .color .yellow {
+  background-color: #FFA52F;
+}
+.group .color .black {
+  background-color: #232321;
+}
+.group .color .green {
+  background-color: #234D41;
+}
+.group .color .darkgray {
+  background-color: #353336;
+}
+.group .color .orange {
+  background-color: #F08155;
+}
+.group .color .white {
+  background-color: #C9CCC6;
+}
+.group .color .lightgray {
+  background-color: #677282;
+}
+.group .color .brown {
+  background-color: #925513;
+}
+.group .color .lightbrown {
+  background-color: #BB8056;
+}
+
+.buttons {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+@media (max-width: 500px) {
+  .buttons {
+    margin-top: 24px;
+  }
+}
+.buttons button {
+  padding: 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  width: 100%;
+  color: #fff;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.buttons .add {
+  background: #232321;
+}
+.buttons .add:hover {
+  background: #fff;
+  color: #232321;
+}
+.buttons .add.addAnim {
+  background: #fff;
+  color: #fff;
+}
+.buttons .buy {
+  background: #4A69E2;
+}
+.buttons .buy:hover {
+  background: #fff;
+  color: #4A69E2;
+}
+
+.about {
+  margin-top: 32px;
+}
+@media (max-width: 500px) {
+  .about {
+    margin-top: 24px;
+  }
+}
+.about .aboutTitle {
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.about .description {
+  font-size: 16px;
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+.error {
+  color: #ff5555;
+  margin-top: 10px;
+}
+
+.mobileImages {
+  display: none;
+}
+.mobileImages .carouselImage {
+  height: 700px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+@media (max-width: 500px) {
+  .mobileImages .carouselImage {
+    height: 500px;
+  }
+}
+@media (max-width: 500px) {
+  .mobileImages .carouselImage {
+    height: 273px;
+  }
+}
+.mobileImages .bottomImages {
+  display: flex;
+  gap: 8px;
+}
+.mobileImages .bottomImages .carouselBottomImage {
+  width: 128px;
+  height: 128px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+@media (max-width: 600px) {
+  .mobileImages .bottomImages .carouselBottomImage {
+    width: 64px;
+    height: 64px;
+  }
+}
+@media (max-width: 1200px) {
+  .mobileImages {
+    display: block;
+  }
+}
+
+/*# sourceMappingURL=Product.module.css.map */

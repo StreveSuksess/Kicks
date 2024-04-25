@@ -1,0 +1,269 @@
+.navigation {
+  background: #FAFAFA;
+  width: 100%;
+  border-radius: 24px;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px;
+}
+@media (max-width: 768px) {
+  .navigation {
+    border-radius: 12px;
+    height: 52px;
+    padding: 16px;
+  }
+}
+
+.ul {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  position: relative;
+}
+@media (max-width: 768px) {
+  .ul {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navLiProfile {
+    display: none;
+  }
+}
+
+.navDrop {
+  font-size: 16px;
+  font-weight: 600;
+  position: relative;
+  cursor: pointer;
+}
+.navDrop::after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background: url("../../assets/downArrow.svg");
+  background-size: cover;
+  top: 16%;
+  right: -15px;
+  position: absolute;
+  transition: all 0.3s;
+}
+.navDrop.transformAfter::after {
+  transform: rotate(180deg);
+}
+@media (max-width: 768px) {
+  .navDrop {
+    display: none;
+  }
+}
+
+.navLink, .logo {
+  cursor: pointer;
+  transition: all 0.3s;
+  position: relative;
+}
+.navLink img, .logo img {
+  transition: all 0.3s;
+}
+.navLinkSearch img, .logoSearch img {
+  width: 28px;
+}
+@media (max-width: 768px) {
+  .navLinkSearch img, .logoSearch img {
+    width: 20px;
+  }
+}
+.navLinkCart img, .logoCart img {
+  width: 27px;
+}
+@media (max-width: 768px) {
+  .navLinkCart img, .logoCart img {
+    width: 20px;
+  }
+}
+.navLink:hover, .logo:hover {
+  scale: 1.3;
+}
+.navLink:hover img, .logo:hover img {
+  scale: 1.3;
+}
+.navLink .cartItemsCount, .logo .cartItemsCount {
+  position: absolute;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  padding: 1px;
+  text-align: center;
+  background-color: #FFA52F;
+  color: #fff;
+  z-index: 1;
+  bottom: 0;
+  right: -10px;
+  transition: all 0.3s;
+  opacity: 0;
+}
+.navLink .cartItemsCount.show, .logo .cartItemsCount.show {
+  opacity: 1;
+}
+@media (max-width: 768px) {
+  .navLink .cartItemsCount, .logo .cartItemsCount {
+    width: 15px;
+    height: 15px;
+    font-size: 12px;
+    padding: 1px;
+  }
+}
+
+.logoLink {
+  width: 135px;
+  height: 39px;
+}
+@media (max-width: 768px) {
+  .logoLink {
+    width: 80px;
+    height: 20px;
+  }
+}
+.logoLink img {
+  width: 100%;
+  height: 100%;
+}
+
+.menDropDown, .womenDropDown {
+  position: absolute;
+  top: 50px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  border-radius: 16px;
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: all 0.3s;
+}
+.menDropDown a, .womenDropDown a {
+  text-align: left;
+  padding: 16px;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 600;
+  opacity: 0.6;
+  border-bottom: 1px solid rgba(35, 35, 33, 0.6);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.menDropDown a:last-child, .womenDropDown a:last-child {
+  border-bottom: none;
+}
+.menDropDown a:hover, .womenDropDown a:hover {
+  opacity: 1;
+}
+.menDropDown.show, .womenDropDown.show {
+  transform: none;
+  z-index: 1;
+  opacity: 1;
+}
+
+.womenDropDown {
+  left: 70px;
+}
+
+.burger {
+  display: none;
+  background: #000;
+  width: 16px;
+  height: 1.5px;
+  border-radius: 2px;
+  position: relative;
+}
+.burger::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background: #000;
+  width: 16px;
+  height: 1.5px;
+  border-radius: 2px;
+  top: -4px;
+  left: 0;
+}
+.burger::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background: #000;
+  width: 16px;
+  height: 1.5px;
+  border-radius: 2px;
+  bottom: -4px;
+  left: 0;
+}
+@media (max-width: 768px) {
+  .burger {
+    display: block;
+  }
+}
+
+.mobileMenu, .menMenu, .womenMenu {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100vw;
+  max-width: 100vw;
+  height: 300vh;
+  background: #F4F2F2;
+  z-index: 2;
+  padding: 16px;
+  animation: 0.5s ease showAnim;
+}
+
+.mobileNavigation {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding-top: 16px;
+}
+.mobileNavigation a, .mobileNavigation button {
+  font-size: 24px;
+  font-weight: 500;
+  text-transform: capitalize;
+  text-align: left;
+}
+.mobileNavigation button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mobileMenuHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 16px;
+  margin: -16px -16px 0 -16px;
+}
+.mobileMenuHeader h3 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.menuAnim {
+  transition: all 0.5s;
+  transform: translateX(-100vw);
+}
+
+@keyframes showAnim {
+  from {
+    transform: translateX(-100vw);
+  }
+  to {
+    transform: none;
+  }
+}
+
+/*# sourceMappingURL=Navigation.module.css.map */

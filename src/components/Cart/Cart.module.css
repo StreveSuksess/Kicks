@@ -1,0 +1,171 @@
+.topText {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+@media (max-width: 768px) {
+  .topText {
+    margin-bottom: 24px;
+  }
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 600;
+}
+@media (max-width: 768px) {
+  .title {
+    font-size: 24px;
+  }
+}
+
+.p {
+  font-size: 14px;
+  font-weight: 500;
+  opacity: 0.8;
+}
+@media (max-width: 768px) {
+  .p {
+    font-size: 12px;
+  }
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 48px;
+}
+@media (max-width: 1220px) {
+  .content {
+    flex-direction: column;
+    gap: 24px;
+  }
+}
+
+.bag {
+  width: 100%;
+  padding: 24px;
+  border-radius: 16px;
+  background: #FAFAFA;
+}
+.bagTitle {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.bagP {
+  font-size: 16px;
+  font-weight: 400;
+  opacity: 0.8;
+}
+@media (max-width: 768px) {
+  .bag {
+    padding: 16px;
+  }
+  .bagTitle {
+    font-size: 20px;
+  }
+  .bagP {
+    font-size: 14px;
+  }
+}
+
+.cartItems {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 48px;
+}
+@media (max-width: 768px) {
+  .cartItems {
+    gap: 8px;
+    margin-top: 8px;
+  }
+}
+
+.summary {
+  width: 100%;
+  max-width: 420px;
+}
+.summaryTitle {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+.summaryGroup {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.summaryGroup span {
+  font-size: 20px;
+  font-weight: 500;
+}
+@media (max-width: 1220px) {
+  .summary {
+    max-width: none;
+    background: #FAFAFA;
+    padding: 24px;
+    border-radius: 16px;
+  }
+}
+@media (max-width: 768px) {
+  .summary {
+    padding: 16px;
+  }
+  .summaryTitle {
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+  .summaryGroup {
+    margin-bottom: 16px;
+  }
+  .summaryGroup span {
+    font-size: 16px;
+  }
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.total .text, .total .totalCost {
+  font-size: 24px;
+  font-weight: 600;
+}
+.total .totalCost {
+  opacity: 0.8;
+}
+@media (max-width: 768px) {
+  .total {
+    margin-bottom: 16px;
+  }
+  .total .text, .total .totalCost {
+    font-size: 20px;
+  }
+}
+
+.checkoutLink {
+  width: 100%;
+  display: block;
+  text-align: center;
+  padding: 16px;
+  border-radius: 8px;
+  background: #232321;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+.checkoutLink:hover {
+  background: #fff;
+  color: #232321;
+}
+
+/*# sourceMappingURL=Cart.module.css.map */

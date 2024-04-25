@@ -1,0 +1,134 @@
+@import "../../../scss/vars";
+
+.reviews {
+  margin-top: 128px;
+  @media(max-width: 768px) {
+    margin-top: 20px;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 48px;
+  @media(max-width: 768px) {
+    margin-bottom: 20px;
+  }
+}
+
+.title {
+  text-transform: uppercase;
+  font-size: 74px;
+  font-weight: 600;
+  @media(max-width: 768px) {
+    font-size: 24px;
+  }
+}
+
+.link {
+  padding: 16px 32px;
+  background-color: $blue;
+  text-transform: uppercase;
+  color: $white;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all .3s;
+  border: 1px solid $blue;
+  border-radius: 8px;
+
+  &:hover {
+    background: transparent;
+    color: $blue;
+  }
+}
+
+.content {
+  display: flex;
+  gap: 16px;
+}
+
+.card {
+  &Header {
+    border-radius: 32px 32px 0 0;
+    background: $white;
+    display: flex;
+    gap: 8px;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 32px;
+    @media(max-width: 768px) {
+      padding: 16px;
+      border-radius: 16px 16px 0 0;
+    }
+  }
+
+  &Text {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    .p {
+      opacity: .8;
+      font-weight: 400;
+      font-size: 16px;
+      @media(max-width: 768px) {
+        font-size: 14px;
+      }
+    }
+
+    .stars {
+      display: flex;
+      align-items: center;
+
+      svg {
+        width: 24px;
+        height: 24px;
+        @media(max-width: 768px) {
+          width: 16px;
+          height: 16px;
+        }
+      }
+
+      span {
+        font-size: 16px;
+        font-weight: 600;
+        display: block;
+        margin-left: 8px;
+        @media(max-width: 768px) {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  &Title {
+    font-size: 24px;
+    font-weight: 600;
+    @media(max-width: 768px) {
+      font-size: 20px;
+    }
+  }
+}
+
+.avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  @media(max-width: 768px) {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+.cardImage {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0 0 32px 32px;
+  @media(max-width: 768px) {
+    border-radius: 0 0 16px 16px;
+  }
+}
+

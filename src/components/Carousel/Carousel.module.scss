@@ -1,0 +1,73 @@
+@import "../../scss/vars";
+
+.carousel {
+  margin-top: 64px;
+  @media(max-width: 768px) {
+    margin-bottom: 52px;
+    margin-top: 28px;
+  }
+}
+
+.header {
+  margin-bottom: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  @media(max-width: 768px) {
+    margin-bottom: 24px;
+  }
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 600;
+  @media(max-width: 768px) {
+    font-size: 24px;
+  }
+}
+
+.arrows {
+  display: flex;
+  gap: 16px;
+  @media(max-width: 768px) {
+    gap: 8px;
+  }
+}
+
+.leftArrow {
+  display: flex;
+  padding: 8px 12px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background: $darkgray;
+}
+
+.leftArrow, .rightArrow {
+  display: flex;
+  padding: 12px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background: $darkgray;
+  cursor: pointer;
+  transition: all .3s;
+
+  svg {
+    transition: all .3s;
+  }
+
+  &:disabled {
+    opacity: .5;
+  }
+
+  &:hover {
+    svg {
+      scale: 1.4;
+    }
+  }
+
+  @media(max-width: 768px) {
+    padding: 8px;
+  }
+}

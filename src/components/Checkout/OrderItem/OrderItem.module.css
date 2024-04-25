@@ -1,0 +1,95 @@
+.item {
+  display: flex;
+  align-items: stretch;
+  gap: 24px;
+  width: 100%;
+}
+.item img {
+  border-radius: 24px;
+  width: 138px;
+  height: 158px;
+  object-fit: cover;
+}
+@media (max-width: 768px) {
+  .item {
+    gap: 16px;
+  }
+  .item img {
+    width: 157px;
+    height: auto;
+  }
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+@media (max-width: 768px) {
+  .title {
+    font-size: 16px;
+  }
+}
+
+.type, .color {
+  font-size: 16px;
+  font-weight: 500;
+  opacity: 0.8;
+}
+@media (max-width: 768px) {
+  .type, .color {
+    font-size: 14px;
+  }
+}
+
+.type {
+  margin-bottom: 4px;
+}
+
+.color {
+  text-transform: capitalize;
+  margin-bottom: 16px;
+}
+@media (max-width: 768px) {
+  .color {
+    margin-bottom: 8px;
+  }
+}
+
+.sizeAndQuantity {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+.sizeAndQuantity span {
+  font-size: 16px;
+  font-weight: 500;
+  opacity: 0.8;
+}
+@media (max-width: 768px) {
+  .sizeAndQuantity {
+    gap: 16px;
+  }
+}
+
+.price {
+  margin-top: auto;
+  display: block;
+  font-size: 20px;
+  font-weight: 600;
+  color: #4A69E2;
+}
+@media (max-width: 768px) {
+  .price {
+    font-size: 16px;
+  }
+}
+
+/*# sourceMappingURL=OrderItem.module.css.map */

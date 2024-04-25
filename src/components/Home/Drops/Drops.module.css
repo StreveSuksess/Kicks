@@ -1,0 +1,78 @@
+.drops {
+  margin-top: 90px;
+}
+@media (max-width: 768px) {
+  .drops {
+    margin-top: 24px;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.title {
+  max-width: 45%;
+  font-size: 44px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+@media (max-width: 1340px) {
+  .title {
+    max-width: 60%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .title {
+    font-size: 24px;
+  }
+}
+
+.headerButton {
+  padding: 16px 32px;
+  border-radius: 8px;
+  background-color: #4A69E2;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  border: 1px solid #4A69E2;
+  transition: all 0.3s;
+  white-space: nowrap;
+}
+.headerButton:hover {
+  background: #fff;
+  color: #4A69E2;
+}
+@media (max-width: 1340px) {
+  .headerButton {
+    padding: 12px 24px;
+  }
+}
+@media (max-width: 768px) {
+  .headerButton {
+    padding: 8px 16px;
+  }
+}
+
+.grid {
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+@media (max-width: 1340px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .grid {
+    margin-top: 24px;
+  }
+}
+
+/*# sourceMappingURL=Drops.module.css.map */

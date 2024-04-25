@@ -1,0 +1,15 @@
+@import "../../scss/vars";
+
+.main {
+  padding-top: 17px;
+  @media(max-width: 768px) {
+    padding-top: 0;
+  }
+}
+
+.mainTitle {
+  margin-bottom: 64px;
+  @media(max-width: 768px) {
+    margin-bottom: 24px;
+  }
+}

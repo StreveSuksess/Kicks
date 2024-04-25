@@ -1,0 +1,218 @@
+.register {
+  display: flex;
+  align-items: stretch;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.left {
+  width: 50%;
+  border-radius: 24px 0 0 24px;
+}
+.left img {
+  border-radius: 24px 0 0 24px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media (max-width: 768px) {
+  .left {
+    width: 40%;
+  }
+}
+@media (max-width: 630px) {
+  .left {
+    width: 30%;
+  }
+}
+@media (max-width: 500px) {
+  .left {
+    width: 15%;
+  }
+}
+
+.right {
+  border-radius: 0 24px 24px 0;
+  padding: 84px 121px;
+  width: 50%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+@media (max-width: 1220px) {
+  .right {
+    padding: 84px 65px;
+  }
+}
+@media (max-width: 920px) {
+  .right {
+    padding: 84px 32px;
+  }
+}
+@media (max-width: 768px) {
+  .right {
+    width: 60%;
+  }
+}
+@media (max-width: 630px) {
+  .right {
+    padding: 32px 24px;
+    width: 70%;
+  }
+}
+@media (max-width: 500px) {
+  .right {
+    width: 85%;
+  }
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+@media (max-width: 768px) {
+  .title {
+    font-size: 24px;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+@media (max-width: 768px) {
+  .form {
+    gap: 16px;
+  }
+}
+.form button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 16px;
+  border-radius: 8px;
+  background: #232321;
+  border: 1px solid #232321;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+@media (max-width: 768px) {
+  .form button {
+    padding: 12px;
+  }
+}
+.form button span {
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #fff;
+  transition: all 0.3s;
+}
+.form button svg path {
+  transition: all 0.3s;
+}
+.form button:hover {
+  background: transparent;
+}
+.form button:hover span {
+  color: #232321;
+}
+.form button:hover svg path {
+  stroke: #232321;
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.groupTitle {
+  font-size: 24px;
+  font-weight: 600;
+}
+@media (max-width: 768px) {
+  .groupTitle {
+    font-size: 20px;
+  }
+}
+.group input {
+  border-radius: 8px;
+  border: 1px solid #232321;
+  padding: 10px 16px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 400;
+}
+.group input::placeholder {
+  color: #79767C;
+}
+@media (max-width: 768px) {
+  .group input {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+}
+
+.loggedContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 150px 0;
+}
+
+.loggedTitle {
+  font-size: 60px;
+  font-weight: 600;
+}
+@media (max-width: 768px) {
+  .loggedTitle {
+    font-size: 32px;
+  }
+}
+
+.logoutButton {
+  margin-top: 30px;
+  padding: 16px 128px;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 8px;
+  background: #232321;
+  border: 1px solid #232321;
+  cursor: pointer;
+  transition: all 0.3s;
+  color: #fff;
+}
+.logoutButton:hover {
+  background: transparent;
+  color: #232321;
+}
+
+.error {
+  margin-top: -15px;
+  color: #ff5555;
+}
+
+.link {
+  display: block;
+  text-align: center;
+  text-decoration: underline;
+  transition: all 0.3s;
+}
+.link:hover {
+  scale: 1.2;
+}
+
+/*# sourceMappingURL=Auth.module.css.map */

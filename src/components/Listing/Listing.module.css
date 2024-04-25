@@ -1,0 +1,472 @@
+.header {
+  margin-top: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 920px) {
+  .header {
+    margin-top: 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 24px;
+  }
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 600;
+}
+@media (max-width: 768px) {
+  .title {
+    font-size: 20px;
+  }
+}
+
+.subText {
+  font-size: 16px;
+  font-weight: 500;
+  opacity: 0.8;
+}
+@media (max-width: 768px) {
+  .subText {
+    font-size: 14px;
+  }
+}
+
+.content {
+  display: flex;
+  gap: 18.75px;
+  justify-content: space-between;
+  margin-top: 32px;
+}
+@media (max-width: 768px) {
+  .content {
+    margin-top: 24px;
+  }
+}
+
+.filter {
+  max-width: 315px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+@media (max-width: 920px) {
+  .filter {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100vw;
+    max-width: 100vw;
+    height: 300vh;
+    background: #F4F2F2;
+    z-index: 2;
+    padding: 16px;
+    animation: 0.5s ease showAnim;
+  }
+  .filter.show {
+    display: flex;
+  }
+}
+
+.mobileFilterHeader {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 16px;
+  margin: -16px -16px 0 -16px;
+}
+.mobileFilterHeader h3 {
+  font-size: 20px;
+  font-weight: 600;
+}
+@media (max-width: 920px) {
+  .mobileFilterHeader {
+    display: flex;
+  }
+}
+
+.items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 16px;
+  row-gap: 38px;
+}
+@media (max-width: 1340px) {
+  .items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 920px) {
+  .items {
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    row-gap: 24px;
+  }
+}
+@media (max-width: 720px) {
+  .items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  .rightCol {
+    width: 100%;
+  }
+}
+
+.filterTitle {
+  font-size: 24px;
+  font-weight: 600;
+}
+@media (max-width: 920px) {
+  .filterTitle {
+    display: none;
+  }
+}
+
+.refine {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.refineButton {
+  padding: 15px;
+  background: #4A69E2;
+  border: 1px solid #4A69E2;
+  color: #fff;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.refineButton:hover {
+  background: #fff;
+  color: #4A69E2;
+}
+
+.size {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.sizeCheckbox {
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.sizeCheckbox input {
+  display: none;
+}
+.sizeCheckbox div {
+  transition: all 0.3s;
+  background: #fff;
+  padding: 16px;
+  border-radius: 8px;
+}
+.sizeCheckbox div span {
+  transition: all 0.3s;
+  color: #232321;
+  font-size: 14px;
+  font-weight: 500;
+}
+.sizeCheckbox input:checked + div {
+  background: #232321;
+}
+.sizeCheckbox input:checked + div span {
+  color: #fff;
+}
+
+.colors {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.colors .colorRadio {
+  cursor: pointer;
+}
+.colors .colorRadio input {
+  display: none;
+}
+.colors .colorRadio input:checked + div {
+  opacity: 1;
+}
+.colors .colorRadio div {
+  transition: all 0.3s;
+  opacity: 0.5;
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+}
+.colors .colorRadio .blue {
+  background-color: #4A69E2;
+}
+.colors .colorRadio .yellow {
+  background-color: #FFA52F;
+}
+.colors .colorRadio .black {
+  background-color: #232321;
+}
+.colors .colorRadio .green {
+  background-color: #234D41;
+}
+.colors .colorRadio .darkgray {
+  background-color: #353336;
+}
+.colors .colorRadio .orange {
+  background-color: #F08155;
+}
+.colors .colorRadio .white {
+  background-color: #C9CCC6;
+}
+.colors .colorRadio .lightgray {
+  background-color: #677282;
+}
+.colors .colorRadio .brown {
+  background-color: #925513;
+}
+.colors .colorRadio .lightbrown {
+  background-color: #BB8056;
+}
+
+.defaultCheckboxes {
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+  padding-left: 2px;
+}
+
+.defaultCheckbox {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+}
+.defaultCheckbox input {
+  display: none;
+}
+.defaultCheckbox div {
+  border: 1px solid #232321;
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.defaultCheckbox div span {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  background: #232321;
+  opacity: 0;
+  transition: all 0.3s;
+}
+.defaultCheckbox input:checked + div span {
+  opacity: 1;
+}
+.defaultCheckbox span {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  border-radius: 10px;
+  height: 2px;
+  background-color: #000;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  background: #4A69E2;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 12px;
+  height: 12px;
+  -webkit-appearance: none;
+  margin-top: -5px;
+}
+
+.dn {
+  display: none !important;
+}
+
+.pagination {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 64px;
+}
+.pagination button, .pagination p {
+  padding: 8px 16px;
+  font-size: 14px;
+  border: 1px solid #232321;
+  border-radius: 8px;
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.pagination button span, .pagination p span {
+  font-size: 14px;
+  transition: all 0.3s;
+}
+@media (max-width: 768px) {
+  .pagination button span, .pagination p span {
+    display: none;
+  }
+}
+.pagination button svg path, .pagination p svg path {
+  transition: all 0.3s;
+}
+.pagination button:hover, .pagination p:hover {
+  background: #232321;
+  color: #fff;
+}
+.pagination button:hover span, .pagination p:hover span {
+  color: #fff;
+}
+.pagination button:hover svg path, .pagination p:hover svg path {
+  fill: #fff;
+}
+.pagination .active {
+  color: #fff;
+  background: #232321;
+}
+
+.range {
+  position: relative;
+}
+.range input {
+  width: 100%;
+}
+.range span {
+  top: 20px;
+  position: absolute;
+  font-size: 14px;
+  font-weight: 500;
+  opacity: 0.8;
+}
+.range .maxPrice {
+  right: 0;
+}
+
+@media (max-width: 768px) {
+  .button3, .button4 {
+    display: none !important;
+  }
+}
+
+.mobileButtons {
+  display: none;
+  justify-content: space-between;
+  width: 100%;
+  gap: 20px;
+}
+@media (max-width: 920px) {
+  .mobileButtons {
+    display: flex;
+  }
+}
+
+.filterButton {
+  max-width: 50%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #F4F2F2;
+  padding: 12px 16px;
+  border-radius: 8px;
+  position: relative;
+}
+.filterButton span {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.mobileFilterButtons {
+  display: none;
+  justify-content: space-between;
+  margin-top: 10px;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+@media (max-width: 920px) {
+  .mobileFilterButtons {
+    display: flex;
+  }
+}
+.mobileFilterButtons div {
+  border-radius: 8px;
+  padding: 16px;
+  border: 1px solid #232321;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 500;
+  width: 100%;
+  text-align: center;
+  transition: all 0.3s;
+}
+.mobileFilterButtons .resetButton {
+  background: #F4F2F2;
+  color: #232321;
+}
+.mobileFilterButtons .resetButton:hover {
+  background: #232321;
+  color: #F4F2F2;
+}
+.mobileFilterButtons .applyButton {
+  background: #232321;
+  color: #F4F2F2;
+}
+.mobileFilterButtons .applyButton:hover {
+  background: #F4F2F2;
+  color: #232321;
+}
+
+.filterAnim {
+  transition: all 0.5s;
+  transform: translateX(-100vw);
+}
+
+.filterCircle {
+  display: block;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: -5px;
+  right: -5px;
+  background: #FFA52F;
+  border-radius: 50%;
+}
+
+@keyframes showAnim {
+  from {
+    transform: translateX(-100vw);
+  }
+  to {
+    transform: none;
+  }
+}
+
+/*# sourceMappingURL=Listing.module.css.map */

@@ -1,0 +1,288 @@
+@import "./../../scss/vars";
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  @media(max-width: 1200px) {
+    flex-direction: column;
+  }
+}
+
+.text {
+  max-width: 430px;
+  width: 100%;
+  @media(max-width: 1200px) {
+    max-width: none;
+  }
+}
+
+.images {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(2, 1fr);
+
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .firstImage {
+    border-radius: 48px 0 0 0;
+  }
+
+  .secondImage {
+    border-radius: 0 48px 0 0;
+  }
+
+  .thirdImage {
+    border-radius: 0 0 0 48px;
+  }
+
+  .fourthImage {
+    border-radius: 0 0 48px 0;
+  }
+
+  @media(max-width: 1200px) {
+    display: none;
+  }
+}
+
+.sizes {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.sizeRadio {
+  transition: all .3s;
+  cursor: pointer;
+
+  input {
+    display: none;
+  }
+
+  div {
+    transition: all .3s;
+    background: $white;
+    padding: 16px;
+    border-radius: 8px;
+
+    span {
+      transition: all .3s;
+      color: $darkgray;
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }
+
+  input:checked + div {
+    background: $darkgray;
+
+    span {
+      color: $white;
+    }
+  }
+
+  input:disabled + div {
+    background: $gray2;
+
+    span {
+      color: $gray3;
+    }
+  }
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 600;
+  @media(max-width: 500px) {
+    font-size: 30px;
+  }
+}
+
+.price {
+  margin-top: 16px;
+  color: $blue;
+  font-size: 24px;
+  font-weight: 600;
+  @media(max-width: 500px) {
+    margin-top: 8px;
+  }
+}
+
+.group {
+  margin-top: 32px;
+
+  @media(max-width: 500px) {
+    margin-top: 24px;
+  }
+
+  .groupTitle {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+  }
+
+  .color {
+    div {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      @media(max-width: 500px) {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    .blue {
+      background-color: #4A69E2;
+    }
+
+    .yellow {
+      background-color: #FFA52F;
+    }
+
+    .black {
+      background-color: #232321;
+    }
+
+    .green {
+      background-color: #234D41;
+    }
+
+    .darkgray {
+      background-color: #353336;
+    }
+
+    .orange {
+      background-color: #F08155;
+    }
+
+    .white {
+      background-color: #C9CCC6;
+    }
+
+    .lightgray {
+      background-color: #677282;
+    }
+
+    .brown {
+      background-color: #925513;
+    }
+
+    .lightbrown {
+      background-color: #BB8056;
+    }
+  }
+}
+
+.buttons {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  @media(max-width: 500px) {
+    margin-top: 24px;
+  }
+
+  button {
+    padding: 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    width: 100%;
+    color: $white;
+    transition: all .3s;
+    cursor: pointer;
+  }
+
+  .add {
+    background: $darkgray;
+
+    &:hover {
+      background: $white;
+      color: $darkgray;
+    }
+
+    &.addAnim {
+      background: $white;
+      color: $white;
+    }
+  }
+
+  .buy {
+    background: $blue;
+
+    &:hover {
+      background: $white;
+      color: $blue;
+    }
+  }
+}
+
+.about {
+  margin-top: 32px;
+
+  @media(max-width: 500px) {
+    margin-top: 24px;
+  }
+
+  .aboutTitle {
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .description {
+    font-size: 16px;
+    font-weight: 400;
+    opacity: .8;
+  }
+}
+
+.error {
+  color: #ff5555;
+  margin-top: 10px;
+}
+
+.mobileImages {
+  display: none;
+
+  .carouselImage {
+    height: 700px;
+    object-fit: cover;
+    border-radius: 16px;
+    @media(max-width: 500px) {
+      height: 500px;
+    }
+    @media(max-width: 500px) {
+      height: 273px;
+    }
+  }
+
+  .bottomImages {
+    display: flex;
+    gap: 8px;
+
+    .carouselBottomImage {
+      width: 128px;
+      height: 128px;
+      object-fit: cover;
+      border-radius: 8px;
+      @media(max-width: 600px) {
+        width: 64px;
+        height: 64px;
+      }
+    }
+  }
+
+
+  @media(max-width: 1200px) {
+    display: block;
+  }
+}

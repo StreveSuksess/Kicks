@@ -1,0 +1,61 @@
+.discount {
+  margin-top: 72px;
+  padding: 102px 40px;
+  border-radius: 48px;
+  background-image: url("./../../../assets/discountImage.jpg");
+  background-size: cover;
+}
+@media (max-width: 768px) {
+  .discount {
+    padding: 45px 16px 16px;
+    margin-top: 24px;
+    border-radius: 16px;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 490px;
+}
+.content span, .content h1, .content p {
+  color: #fff;
+}
+@media (max-width: 768px) {
+  .content {
+    max-width: 220px;
+  }
+}
+
+.supText {
+  font-size: 24px;
+  font-weight: 500;
+}
+@media (max-width: 768px) {
+  .supText {
+    font-size: 12px;
+  }
+}
+
+.title {
+  font-size: 74px;
+  font-weight: 600;
+}
+@media (max-width: 768px) {
+  .title {
+    font-size: 20px;
+  }
+}
+
+.p {
+  font-size: 20px;
+  font-weight: 400;
+}
+@media (max-width: 768px) {
+  .p {
+    font-size: 10px;
+  }
+}
+
+/*# sourceMappingURL=Discount.module.css.map */

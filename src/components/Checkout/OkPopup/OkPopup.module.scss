@@ -1,0 +1,64 @@
+@import "../../../scss/vars";
+
+.main {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba($lightgray, 1);
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: 1s ease opacityAnim;
+  @media(max-width: 768px) {
+    padding: 20px;
+  }
+}
+
+.content {
+  padding: 50px;
+  max-width: 450px;
+  background: $white;
+  border-radius: 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+
+  h3 {
+    font-size: 30px;
+  }
+
+  p {
+    text-align: center;
+    font-weight: 400;
+    font-size: 18px;
+  }
+
+  @media(max-width: 768px) {
+    max-width: none;
+  }
+}
+
+.checkSvg {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background-color: #E0F7FA;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes opacityAnim {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

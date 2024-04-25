@@ -1,0 +1,19 @@
+.main {
+  padding-top: 17px;
+}
+@media (max-width: 768px) {
+  .main {
+    padding-top: 0;
+  }
+}
+
+.mainTitle {
+  margin-bottom: 64px;
+}
+@media (max-width: 768px) {
+  .mainTitle {
+    margin-bottom: 24px;
+  }
+}
+
+/*# sourceMappingURL=Home.module.css.map */

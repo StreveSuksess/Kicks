@@ -1,0 +1,166 @@
+@import "../../scss/vars";
+
+.topText {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 32px;
+  @media(max-width: 768px) {
+    margin-bottom: 24px;
+  }
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 600;
+  @media(max-width: 768px) {
+    font-size: 24px;
+  }
+}
+
+.p {
+  font-size: 14px;
+  font-weight: 500;
+  opacity: .8;
+  @media(max-width: 768px) {
+    font-size: 12px;
+  }
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 48px;
+  @media(max-width: 1220px) {
+    flex-direction: column;
+    gap: 24px;
+  }
+}
+
+.bag {
+  width: 100%;
+  padding: 24px;
+  border-radius: 16px;
+  background: $white2;
+
+  &Title {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  &P {
+    font-size: 16px;
+    font-weight: 400;
+    opacity: .8;
+  }
+
+  @media(max-width: 768px) {
+    padding: 16px;
+    &Title {
+      font-size: 20px;
+    }
+    &P {
+      font-size: 14px;
+    }
+  }
+}
+
+.cartItems {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 48px;
+  @media(max-width: 768px) {
+    gap: 8px;
+    margin-top: 8px;
+  }
+}
+
+.summary {
+  width: 100%;
+  max-width: 420px;
+
+  &Title {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 24px;
+  }
+
+  &Group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+
+    span {
+      font-size: 20px;
+      font-weight: 500;
+    }
+  }
+
+  @media(max-width: 1220px) {
+    max-width: none;
+    background: $white2;
+    padding: 24px;
+    border-radius: 16px;
+  }
+  @media(max-width: 768px) {
+    padding: 16px;
+
+    &Title {
+      font-size: 20px;
+      margin-bottom: 16px;
+    }
+    &Group {
+      margin-bottom: 16px;
+
+      span {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+
+  .text, .totalCost {
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  .totalCost {
+    opacity: .8;
+  }
+
+  @media(max-width: 768px) {
+    margin-bottom: 16px;
+    .text, .totalCost {
+      font-size: 20px;
+    }
+  }
+}
+
+.checkoutLink {
+  width: 100%;
+  display: block;
+  text-align: center;
+  padding: 16px;
+  border-radius: 8px;
+  background: $darkgray;
+  color: $white;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: all .3s;
+
+  &:hover {
+    background: $white;
+    color: $darkgray;
+  }
+}

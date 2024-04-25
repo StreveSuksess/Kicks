@@ -1,0 +1,38 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  cursor: pointer;
+
+  svg {
+    transition: all .3s;
+  }
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.reverse {
+  transform: rotate(180deg);
+}
+
+.content {
+  transition: all .3s;
+}
+
+.show {
+  position: static;
+  opacity: 1;
+}
+
+.nonShow {
+  position: absolute;
+  z-index: -100;
+  transform: translateY(-25px);
+  opacity: 0;
+}
+

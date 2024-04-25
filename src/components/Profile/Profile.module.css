@@ -1,0 +1,58 @@
+.title {
+  font-size: 74px;
+  font-weight: 600;
+}
+@media (max-width: 768px) {
+  .title {
+    font-size: 48px;
+  }
+}
+
+.details {
+  margin-top: 32px;
+}
+.detailsTitle {
+  font-size: 30px;
+}
+.details p {
+  margin-top: 10px;
+  font-size: 20px;
+}
+@media (max-width: 768px) {
+  .details {
+    margin-top: 24px;
+  }
+  .detailsTitle {
+    font-size: 20px;
+  }
+  .details p {
+    margin-top: 8px;
+    font-size: 16px;
+  }
+}
+
+.logoutButton {
+  margin: 32px auto 0;
+  display: block;
+  padding: 16px 128px;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 8px;
+  background: #232321;
+  border: 1px solid #232321;
+  cursor: pointer;
+  transition: all 0.3s;
+  color: #fff;
+}
+.logoutButton:hover {
+  background: transparent;
+  color: #232321;
+}
+@media (max-width: 768px) {
+  .logoutButton {
+    margin: 24px auto 0;
+  }
+}
+
+/*# sourceMappingURL=Profile.module.css.map */
